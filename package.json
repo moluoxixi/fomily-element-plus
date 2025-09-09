@@ -1,0 +1,22 @@
+{
+  "name": "root",
+  "private": true,
+  "devEngines": {
+    "node": "8.x || 9.x || 10.x || 11.x"
+  },
+  "workspaces": [
+    "packages/*",
+    "playground"
+  ],
+  "scripts": {
+    "eslint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx,.md --fix"
+  },
+  "devDependencies": {
+    "eslint": "catalog:dev",
+    "@moluoxixi/eslintconfig": "latest",
+    "eslint-plugin-format": "catalog:dev"
+  },
+  "peerDependencies": {
+    "vue": "catalog:build"
+  }
+}
