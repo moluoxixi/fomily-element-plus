@@ -1,16 +1,13 @@
 {
   "name": "@moluoxixi/element-prototypes",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "src/index.ts",
-  "engines": {
-    "npm": ">=3.0.0"
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "eslint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx,.md --fix"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "dependencies": {
     "@designable/core": "catalog:build",

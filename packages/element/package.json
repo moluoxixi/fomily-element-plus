@@ -1,7 +1,7 @@
 {
   "name": "@moluoxixi/element",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "src/index.ts",
   "publishConfig": {
     "access": "public"
@@ -9,11 +9,13 @@
   "scripts": {
     "eslint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx,.md --fix"
   },
+  "peerDependencies": {
+    "vue": "catalog:build"
+  },
   "dependencies": {
     "resize-observer-polyfill": "^1.5.1",
     "vue-slicksort": "^1.2.0",
     "vuedraggable": "catalog:build",
-    "vue": "catalog:build",
     "@element-plus/icons-vue": "catalog:build",
     "@formily/core": "catalog:build",
     "@formily/grid": "catalog:build",

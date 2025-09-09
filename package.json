@@ -6,7 +6,9 @@
     "playground"
   ],
   "scripts": {
-    "eslint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx,.md --fix"
+    "eslint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx,.md --fix",
+    "publish:dry": "pnpm dlx tsx scripts/publish.mts --dry-run",
+    "publish": "pnpm dlx tsx scripts/publish.mts"
   },
   "devDependencies": {
     "eslint": "catalog:dev",
