@@ -114,14 +114,13 @@ function bumpPackageVersion(pkgDir: string, type: VersionBump, dryRun: boolean):
 
   const next = getNextVersion(pkg.version as string, type)
   const prev = pkg.version
-  if (dryRun) {
-    console.log(`预览版本更新：${pkg.name} ${prev} -> ${next}`)
-    return { skipped: false, version: String(next), name: String(pkg.name), prevVersion: String(prev) }
-  }
   pkg.version = next
   writeJSON(pkgPath, pkg)
-  console.log(`版本更新：${pkg.name} ${prev} -> ${next}`)
-  return { skipped: false, version: next, name: pkg.name as string, prevVersion: String(prev) }
+  console.log(dryRun
+    ? `预览版本更新（已写入）：${pkg.name} ${prev} -> ${next}`
+    : `版本更新：${pkg.name} ${prev} -> ${next}`
+  )
+  return { skipped: false, version: String(next), name: String(pkg.name), prevVersion: String(prev) }
 }
 
 /**
@@ -161,7 +160,7 @@ function publishPackage(pkgDir: string, dryRun: boolean): PublishResult {
   let result
   if (dryRun) {
     // 仅打包预览：npm pack --dry-run
-    result = spawnSync('npm', ['pack', '--dry-run'], {
+    result = spawnSync('npm', ['publish', '--dry-run'], {
       cwd: pkgDir,
       stdio: 'inherit',
       shell: process.platform === 'win32'
@@ -170,15 +169,15 @@ function publishPackage(pkgDir: string, dryRun: boolean): PublishResult {
     // 先用 npm publish --dry-run 做预发布校验（含“是否已发布”的校验）
     const precheck = spawnSync('npm', ['publish', '--dry-run'], {
       cwd: pkgDir,
-      stdio: 'inherit',
+      stdio: 'pipe',
       shell: process.platform === 'win32'
     })
     if (precheck.status !== 0) {
       console.error(`预发布校验失败：${displayName}`)
       return false
     }
-    // 校验通过后再用 pnpm 发布（不加任何修饰符）
-    result = spawnSync('pnpm', ['publish'], {
+    // 校验通过后再用 pnpm 发布
+    result = spawnSync('pnpm', ['publish --registry https://registry.npmjs.org/'], {
       cwd: pkgDir,
       stdio: 'inherit',
       shell: process.platform === 'win32'
@@ -272,8 +271,11 @@ function main() {
       }
       const ok = publishPackage(dir, dryRun)
       results.push({ dir, ok, skipped: false })
-      if (!dryRun && !ok && bump.prevVersion) {
-        // 发布失败，回滚版本
+      if (dryRun && bump.prevVersion) {
+        // 预览完成后始终回滚
+        rollbackPackageVersion(dir, bump.prevVersion)
+      } else if (!dryRun && !ok && bump.prevVersion) {
+        // 真实发布失败回滚
         rollbackPackageVersion(dir, bump.prevVersion)
       }
     } catch (e) {
