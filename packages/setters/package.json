@@ -19,9 +19,7 @@
     "@formily/reactive-vue": "catalog:build",
     "vue-demi": "catalog:build",
     "classnames": "catalog:build",
-    "element-plus": "catalog:build"
-  },
-  "devDependencies": {
+    "element-plus": "catalog:build",
     "@moluoxixi/element-prototypes": "workspace:*",
     "@moluoxixi/element-settings-form": "workspace:*",
     "@moluoxixi/element": "workspace:*"

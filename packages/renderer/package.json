@@ -25,9 +25,7 @@
     "@vue/runtime-core": "catalog:build",
     "element-plus": "catalog:build",
     "@element-plus/icons-vue": "catalog:build",
-    "classnames": "catalog:build"
-  },
-  "devDependencies": {
+    "classnames": "catalog:build",
     "@moluoxixi/element-setters": "workspace:*",
     "@moluoxixi/element": "workspace:*",
     "@moluoxixi/element-settings-form": "workspace:*",

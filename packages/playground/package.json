@@ -31,14 +31,14 @@
     "resize-observer-polyfill": "^1.5.1",
     "vue-demi": "catalog:build",
     "vue-slicksort": "^2.0.0-alpha.5",
-    "vuedraggable": "catalog:build"
-  },
-  "devDependencies": {
     "@formily/vue": "catalog:build",
+    "vuedraggable": "catalog:build",
     "@moluoxixi/element": "workspace:*",
     "@moluoxixi/element-prototypes": "workspace:*",
     "@moluoxixi/element-renderer": "workspace:*",
-    "@moluoxixi/element-settings-form": "workspace:*",
+    "@moluoxixi/element-settings-form": "workspace:*"
+  },
+  "devDependencies": {
     "@vitejs/plugin-vue": "catalog:dev",
     "@vitejs/plugin-vue-jsx": "catalog:dev",
     "core-js": "^3.22.5",

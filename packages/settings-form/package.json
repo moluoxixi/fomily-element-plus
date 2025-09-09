@@ -29,9 +29,7 @@
     "classnames": "catalog:build",
     "element-plus": "catalog:build",
     "vue-demi": "catalog:build",
-    "vue-slicksort": "^1.2.0"
-  },
-  "devDependencies": {
+    "vue-slicksort": "^1.2.0",
     "@moluoxixi/element": "workspace:*",
     "@moluoxixi/element-prototypes": "workspace:*"
   }
