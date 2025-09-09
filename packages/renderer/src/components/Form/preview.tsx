@@ -1,4 +1,5 @@
 import { createBehavior, createResource } from '@designable/core'
+import type {Component } from 'vue'
 import { createForm } from '@formily/core'
 import { observer } from '@formily/reactive-vue'
 import { Form as FormilyForm } from '@moluoxixi/element'
@@ -34,7 +35,7 @@ const FormComponent = observer(
   }),
 )
 
-export const Form: DnFC<Vue.Component<any, any, any, typeof FormilyForm>>
+export const Form: DnFC<Component<any, any, any, typeof FormilyForm>>
   = composeExport(FormComponent, {
     Behavior: createBehavior({
       name: 'Form',

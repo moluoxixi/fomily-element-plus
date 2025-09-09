@@ -33,7 +33,7 @@
             </ViewPanel>
             <ViewPanel type="JSONTREE" :scrollable="false">
               <template #default="tree">
-                <SchemaEditorWidget :tree="tree" @change="onChange" />
+                <SchemaEditorWidget :tree="tree" />
               </template>
             </ViewPanel>
             <ViewPanel type="PREVIEW" :scrollable="false">
@@ -101,6 +101,10 @@ import {
 } from '@moluoxixi/element-renderer'
 import { SettingsForm } from '@moluoxixi/element-settings-form'
 import { defineComponent } from 'vue'
+import LogoWidget from "./widgets/logo-widget.vue";
+import ActionsWidget from "./widgets/actions-widget.vue";
+import PreviewWidget from "./widgets/preview-widget";
+import SchemaEditorWidget from "./widgets/schema-editor-widget";
 
 GlobalRegistry.registerDesignerLocales({
   'zh-CN': {
@@ -122,6 +126,10 @@ GlobalRegistry.registerDesignerLocales({
 })
 export default defineComponent({
   components: {
+    SchemaEditorWidget,
+    PreviewWidget,
+    ActionsWidget,
+    LogoWidget,
     Designer,
     Workbench,
     StudioPanel,
