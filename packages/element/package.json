@@ -1,6 +1,7 @@
 {
   "name": "@moluoxixi/element",
   "license": "MIT",
+  "version": "1.0.1",
   "main": "src/index.ts",
   "publishConfig": {
     "access": "public"

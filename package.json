@@ -1,9 +1,6 @@
 {
   "name": "root",
   "private": true,
-  "devEngines": {
-    "node": "8.x || 9.x || 10.x || 11.x"
-  },
   "workspaces": [
     "packages/*",
     "playground"

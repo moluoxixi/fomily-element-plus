@@ -1,6 +1,6 @@
 {
   "name": "@moluoxixi/element-settings-form",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "src/index.ts",
   "engines": {
