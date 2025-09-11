@@ -36,7 +36,7 @@ import {
   loading,
   resolveComponent,
   stylePrefix,
-} from '../__builtins__'
+} from '@moluoxixi/builtins'
 
 interface FormDialogContentProps { form: Form }
 

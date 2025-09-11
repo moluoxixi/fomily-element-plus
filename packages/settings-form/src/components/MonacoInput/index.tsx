@@ -10,7 +10,7 @@ import cls from 'classnames'
 import './styles.less'
 import { initMonaco } from './config'
 
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import type { PropType } from 'vue'
 import { onBeforeUnmount, shallowRef, watch } from 'vue'
 

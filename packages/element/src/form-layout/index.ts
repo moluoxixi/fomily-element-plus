@@ -11,7 +11,7 @@ import {
   watch,
 } from 'vue'
 import { h } from '@formily/vue'
-import { stylePrefix } from '../__builtins__'
+import { stylePrefix } from '@moluoxixi/builtins'
 import { useResponsiveFormLayout } from './useResponsiveFormLayout'
 
 export interface FormLayoutProps {

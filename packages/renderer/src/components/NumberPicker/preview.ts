@@ -1,5 +1,5 @@
 import { InputNumber as FormilyInputNumber } from '@moluoxixi/element'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import { createBehavior, createResource } from '@designable/core'
 import type { DnFC } from '@moluoxixi/element-prototypes'
 import { createFieldSchema } from '../Field'

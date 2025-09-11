@@ -3,7 +3,7 @@ import { observer } from '@formily/reactive-vue'
 import type { ArrayField } from '@formily/core'
 import { RecursionField, useField, useFieldSchema } from '@formily/vue'
 import { ElBadge, ElTabPane, ElTabs } from 'element-plus'
-import { stylePrefix } from '../__builtins__/configs'
+import { stylePrefix } from '@moluoxixi/builtins/configs'
 
 export const ArrayTabs = observer(
   defineComponent({

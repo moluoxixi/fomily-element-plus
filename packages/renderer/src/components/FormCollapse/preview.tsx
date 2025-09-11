@@ -20,7 +20,7 @@ import { AllLocales } from '../../locales'
 import { matchComponent } from '../../shared'
 import type { DefineComponent } from 'vue-demi'
 import { defineComponent, nextTick, ref } from 'vue-demi'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 
 function parseCollapse(parent: TreeNode) {
   const tabs: TreeNode[] = []

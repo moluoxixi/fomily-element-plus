@@ -7,7 +7,7 @@ import { IconWidget, usePrefix } from '@moluoxixi/element-prototypes'
 import cls from 'classnames'
 import './styles.less'
 import { defineComponent, unref } from 'vue-demi'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 
 const ExpandedMap = new Map<string, boolean>()
 

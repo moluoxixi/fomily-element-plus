@@ -26,7 +26,7 @@ import {
   getStyleNumber,
   resolveComponent,
   stylePrefix,
-} from '../__builtins__'
+} from '@moluoxixi/builtins'
 
 import { ElIcon, ElTooltip } from 'element-plus'
 import ResizeObserver from 'resize-observer-polyfill'

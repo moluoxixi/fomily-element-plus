@@ -5,12 +5,12 @@ import {
   createContext,
   resolveComponent,
   useContext,
-} from '../__builtins__/shared'
+} from '@moluoxixi/builtins/shared'
 import type { Field } from '@formily/core'
 import { observer } from '@formily/reactive-vue'
 import { useField } from '@formily/vue'
 import { isArr, isValid } from '@formily/shared'
-import { stylePrefix } from '../__builtins__/configs'
+import { stylePrefix } from '@moluoxixi/builtins/configs'
 import type { SelectProps } from '../select'
 import type { CascaderProps } from '../cascader'
 import type { DatePickerProps } from '../date-picker'

@@ -1,4 +1,4 @@
-import { composeExport, transformComponent } from '../__builtins__'
+import { composeExport, transformComponent } from '@moluoxixi/builtins'
 import { connect, mapProps, mapReadPretty } from '@formily/vue'
 import { PreviewText } from '../preview-text'
 import { ElInput } from 'element-plus'

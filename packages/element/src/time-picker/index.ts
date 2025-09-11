@@ -1,4 +1,4 @@
-import { transformComponent } from '../__builtins__/shared'
+import { transformComponent } from '@moluoxixi/builtins/shared'
 import { connect, mapProps, mapReadPretty } from '@formily/vue'
 import { PreviewText } from '../preview-text'
 import { ElTimePicker } from 'element-plus'

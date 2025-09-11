@@ -37,7 +37,8 @@
     "@moluoxixi/element": "workspace:*",
     "@moluoxixi/element-prototypes": "workspace:*",
     "@moluoxixi/element-renderer": "workspace:*",
-    "@moluoxixi/element-settings-form": "workspace:*"
+    "@moluoxixi/element-settings-form": "workspace:*",
+    "@moluoxixi/builtins": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "catalog:dev",

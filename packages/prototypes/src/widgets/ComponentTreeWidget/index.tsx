@@ -8,7 +8,7 @@ import cls from 'classnames'
 import './styles.less'
 import type { PropType } from 'vue-demi'
 import { defineComponent, provide, toRef } from 'vue-demi'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import type { VNode } from 'vue'
 
 export interface IComponentTreeWidgetProps {

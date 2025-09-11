@@ -1,5 +1,5 @@
 import { ElRate } from 'element-plus'
-import { composeExport, transformComponent } from '@moluoxixi/element/src/__builtins__'
+import { composeExport, transformComponent } from '@moluoxixi/builtins'
 import { connect, mapProps } from '@formily/vue'
 import { createBehavior, createResource } from '@designable/core'
 import type { DnFC } from '@moluoxixi/element-prototypes'

@@ -31,6 +31,7 @@
     "vue-demi": "catalog:build",
     "vue-slicksort": "^1.2.0",
     "@moluoxixi/element": "workspace:*",
-    "@moluoxixi/element-prototypes": "workspace:*"
+    "@moluoxixi/element-prototypes": "workspace:*",
+    "@moluoxixi/builtins": "workspace:*"
   }
 }

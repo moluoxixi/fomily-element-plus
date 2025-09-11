@@ -1,6 +1,6 @@
 @use 'sass:math';
-@use '../__builtins__/styles/common.scss';
-@use '../__builtins__/styles/element-plus.scss' as ElementPlus;
+@use '@moluoxixi/builtins/styles/common.scss';
+@use '@moluoxixi/builtins/styles/element-plus.scss' as ElementPlus;
 @use './var.scss';
 @use './grid.scss';
 @use './animation.scss';

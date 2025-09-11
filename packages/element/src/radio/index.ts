@@ -3,12 +3,12 @@ import type { PropType } from 'vue'
 import { defineComponent, h } from 'vue'
 import type {
   SlotTypes,
-} from '../__builtins__/shared'
+} from '@moluoxixi/builtins/shared'
 import {
   composeExport,
   resolveComponent,
   transformComponent,
-} from '../__builtins__/shared'
+} from '@moluoxixi/builtins/shared'
 import { PreviewText } from '../preview-text'
 
 import { ElRadio, ElRadioButton, ElRadioGroup } from 'element-plus'

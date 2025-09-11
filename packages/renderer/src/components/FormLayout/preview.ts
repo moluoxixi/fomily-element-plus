@@ -4,7 +4,7 @@ import { withContainer } from '../../common/Container'
 import { createVoidFieldSchema } from '../Field'
 import { AllSchemas } from '../../schemas'
 import { AllLocales } from '../../locales'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 
 export const FormLayout
   = composeExport(withContainer(FormilyFormLayout), {

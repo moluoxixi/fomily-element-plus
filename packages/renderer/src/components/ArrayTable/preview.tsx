@@ -30,7 +30,7 @@ import { createVoidFieldSchema } from '../Field'
 import { AllSchemas } from '../../schemas'
 import { AllLocales } from '../../locales'
 
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import { defineComponent, getCurrentInstance, onMounted } from 'vue-demi'
 import type { VNode } from 'vue'
 import { ref } from 'vue'

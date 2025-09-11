@@ -9,7 +9,7 @@ import { FreeSelection } from './FreeSelection'
 import { Cover } from './Cover'
 import { DashedBox } from './DashedBox'
 import './styles.less'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import { defineComponent, onBeforeUnmount, ref } from 'vue-demi'
 
 const AuxToolWidgetComponent = defineComponent({

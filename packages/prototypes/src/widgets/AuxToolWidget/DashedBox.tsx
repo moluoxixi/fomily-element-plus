@@ -5,7 +5,7 @@ import {
   useValidNodeOffsetRect,
 } from '../../hooks'
 import { observer } from '@formily/reactive-vue'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import { computed, defineComponent } from 'vue-demi'
 import { isNum } from '@designable/shared'
 

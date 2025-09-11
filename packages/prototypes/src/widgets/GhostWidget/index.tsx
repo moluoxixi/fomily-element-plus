@@ -4,7 +4,7 @@ import { autorun } from '@formily/reactive'
 import { observer } from '@formily/reactive-vue'
 import { NodeTitleWidget } from '../NodeTitleWidget'
 import './styles.less'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import { defineComponent, ref, unref } from 'vue-demi'
 import { useEffect } from '../../shared/useEffect'
 

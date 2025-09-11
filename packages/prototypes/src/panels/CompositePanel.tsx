@@ -2,7 +2,7 @@ import { isValid } from '@designable/shared'
 import cls from 'classnames'
 import { IconWidget, TextWidget } from '../widgets'
 import { usePrefix } from '../hooks'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import type {
   VNode,
 } from 'vue-demi'

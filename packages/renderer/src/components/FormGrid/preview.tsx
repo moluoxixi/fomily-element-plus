@@ -11,7 +11,7 @@ import { AllSchemas } from '../../schemas'
 import { AllLocales } from '../../locales'
 import './styles.less'
 
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import { defineComponent } from 'vue-demi'
 
 export const FormGrid = composeExport(

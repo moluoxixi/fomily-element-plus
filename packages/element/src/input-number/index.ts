@@ -1,4 +1,4 @@
-import { transformComponent } from '../__builtins__'
+import { transformComponent } from '@moluoxixi/builtins'
 import { connect, mapProps, mapReadPretty } from '@formily/vue'
 import { ElInputNumber } from 'element-plus'
 import { PreviewText } from '../preview-text'

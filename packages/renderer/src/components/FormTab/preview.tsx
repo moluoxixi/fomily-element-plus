@@ -18,7 +18,7 @@ import { AllSchemas } from '../../schemas'
 import { AllLocales } from '../../locales'
 import { matchComponent } from '../../shared'
 
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import type { DefineComponent } from 'vue-demi'
 import { defineComponent, ref } from 'vue-demi'
 

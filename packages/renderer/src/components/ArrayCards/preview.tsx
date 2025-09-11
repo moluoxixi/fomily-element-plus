@@ -10,7 +10,7 @@ import { ArrayBase, createArrayBehavior } from '../ArrayBase'
 import cls from 'classnames'
 import './styles.less'
 
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import { defineComponent } from 'vue-demi'
 import type { VNode } from 'vue'
 

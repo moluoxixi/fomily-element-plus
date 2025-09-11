@@ -29,6 +29,7 @@
     "@moluoxixi/element-setters": "workspace:*",
     "@moluoxixi/element": "workspace:*",
     "@moluoxixi/element-settings-form": "workspace:*",
-    "@moluoxixi/element-prototypes": "workspace:*"
+    "@moluoxixi/element-prototypes": "workspace:*",
+    "@moluoxixi/builtins": "workspace:*"
   }
 }

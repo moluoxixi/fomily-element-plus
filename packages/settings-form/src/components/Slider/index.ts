@@ -2,7 +2,7 @@ import { ElSlider } from 'element-plus'
 import {
   composeExport,
   transformComponent,
-} from '@moluoxixi/element/src/__builtins__'
+} from '@moluoxixi/builtins'
 import { connect, mapProps, mapReadPretty } from '@formily/vue'
 import { createBehavior, createResource } from '@designable/core'
 import { createFieldSchema } from '../Field'

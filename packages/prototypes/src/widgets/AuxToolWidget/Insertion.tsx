@@ -1,7 +1,7 @@
 import { useDragon, usePrefix } from '../../hooks'
 import { ClosestPosition } from '@designable/core'
 import { observer } from '@formily/reactive-vue'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import { defineComponent } from 'vue-demi'
 import { isNum } from '@designable/shared'
 

@@ -3,7 +3,7 @@ import cls from 'classnames'
 import type { InjectionKey, Ref } from 'vue-demi'
 import { computed, defineComponent, provide } from 'vue-demi'
 import './styles.less'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 
 export interface IInputItemsContext {
   width?: string | number

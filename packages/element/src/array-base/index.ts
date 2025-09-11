@@ -21,8 +21,8 @@ import type { Schema } from '@formily/json-schema'
 // import { HandleDirective } from 'vue-slicksort'
 import { ArrowDown, ArrowUp, Delete, Rank } from '@element-plus/icons-vue'
 
-import { stylePrefix } from '../__builtins__/configs'
-import { composeExport } from '../__builtins__/shared'
+import { stylePrefix } from '@moluoxixi/builtins/configs'
+import { composeExport } from '@moluoxixi/builtins/shared'
 
 export interface IArrayBaseAdditionProps extends ElButtonProps {
   title?: string

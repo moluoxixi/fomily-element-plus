@@ -2,7 +2,7 @@ import { useOperation, usePrefix } from '../../hooks'
 import { IconWidget } from '../IconWidget'
 import { defineComponent } from 'vue-demi'
 import { useStyle } from '../../shared'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 
 // export interface ICopyProps {
 //   node: TreeNode

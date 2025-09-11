@@ -6,7 +6,7 @@ import { IconWidget } from '../IconWidget'
 import { TextWidget } from '../TextWidget'
 import cls from 'classnames'
 import './styles.less'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import type { ComponentCustomProps, CSSProperties, VNode } from 'vue-demi'
 import { defineComponent } from 'vue-demi'
 

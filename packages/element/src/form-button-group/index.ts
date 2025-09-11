@@ -3,7 +3,7 @@ import { defineComponent } from 'vue'
 import type { SpaceProps } from '../space'
 import { Space } from '../space'
 import { FormBaseItem } from '../form-item'
-import { stylePrefix } from '../__builtins__'
+import { stylePrefix } from '@moluoxixi/builtins'
 
 export type FormButtonGroupProps = Omit<SpaceProps, 'align' | 'size'> & {
   align?: 'left' | 'right' | 'center'

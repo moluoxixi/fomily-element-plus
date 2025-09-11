@@ -3,12 +3,12 @@ import { defineComponent, h } from 'vue'
 import { connect, mapProps, mapReadPretty } from '@formily/vue'
 import type {
   SlotTypes,
-} from '../__builtins__/shared'
+} from '@moluoxixi/builtins/shared'
 import {
   composeExport,
   resolveComponent,
   transformComponent,
-} from '../__builtins__/shared'
+} from '@moluoxixi/builtins/shared'
 
 import { ElCheckbox, ElCheckboxButton, ElCheckboxGroup } from 'element-plus'
 import { PreviewText } from '../preview-text'

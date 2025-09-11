@@ -27,8 +27,8 @@ import {
 
 import { Space } from '../space'
 import { ArrayBase } from '../array-base'
-import { stylePrefix } from '../__builtins__/configs'
-import { composeExport } from '../__builtins__/shared'
+import { stylePrefix } from '@moluoxixi/builtins/configs'
+import { composeExport } from '@moluoxixi/builtins/shared'
 
 type ElTableProps = typeof ElTable
 type ElColumnProps = typeof ElTableColumn

@@ -1,5 +1,5 @@
 import { ElCard } from 'element-plus'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import { createBehavior, createResource } from '@designable/core'
 import type { DnFC, useStyle } from '@moluoxixi/element-prototypes'
 import { createVoidFieldSchema } from '../Field'

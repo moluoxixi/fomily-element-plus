@@ -22,7 +22,8 @@
     "element-plus": "catalog:build",
     "@moluoxixi/element-prototypes": "workspace:*",
     "@moluoxixi/element-settings-form": "workspace:*",
-    "@moluoxixi/element": "workspace:*"
+    "@moluoxixi/element": "workspace:*",
+    "@moluoxixi/builtins": "workspace:*"
   },
   "peerDependencies": {
     "vue": "catalog:build"

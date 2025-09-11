@@ -1,4 +1,4 @@
-export * from './common/FormItemSwitcher'
+export * from './common'
 export * from './components'
 export * from './locales'
 

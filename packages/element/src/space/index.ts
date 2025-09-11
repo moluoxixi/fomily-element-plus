@@ -1,6 +1,6 @@
 import { defineComponent, h } from 'vue'
 import type { SetupContext, VNode } from 'vue'
-import { stylePrefix } from '../__builtins__'
+import { stylePrefix } from '@moluoxixi/builtins'
 import { useFormLayout } from '../form-layout'
 import { isValidElementNode } from 'element-plus/es/utils/vue/vnode'
 

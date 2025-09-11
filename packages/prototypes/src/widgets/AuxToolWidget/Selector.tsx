@@ -12,7 +12,7 @@ import {
   unref,
 } from 'vue-demi'
 import type { CSSProperties, Ref } from '@vue/runtime-dom'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 
 function useMouseHover(refInstance: Ref<HTMLElement | undefined>, enter?: () => void, leave?: () => void) {
   const unmounted = ref(false)

@@ -26,6 +26,7 @@
     "@formily/validator": "catalog:build",
     "@formily/vue": "catalog:build",
     "element-plus": "catalog:build",
-    "vue-demi": "catalog:build"
+    "vue-demi": "catalog:build",
+    "@moluoxixi/builtins": "workspace:*"
   }
 }

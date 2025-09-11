@@ -10,7 +10,7 @@ import { AllLocales } from '../../locales'
 import './styles.less'
 
 import { computed, defineComponent, unref } from 'vue-demi'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 
 const FormComponent = observer(
   defineComponent({

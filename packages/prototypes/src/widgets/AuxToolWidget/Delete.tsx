@@ -1,6 +1,6 @@
 import { IconWidget } from '../IconWidget'
 import { useOperation, usePrefix } from '../../hooks'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import { defineComponent } from 'vue-demi'
 
 // export interface IDeleteProps {

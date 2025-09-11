@@ -1,7 +1,7 @@
 import { defineComponent } from '@vue/runtime-core'
 import { usePrefix } from '../hooks'
 import { useStyle } from '../shared'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 
 export interface IWorkspaceItemProps {
   style?: any

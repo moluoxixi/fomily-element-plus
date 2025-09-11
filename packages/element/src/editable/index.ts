@@ -8,10 +8,10 @@ import { useField } from '@formily/vue'
 import { ElPopover } from 'element-plus'
 import { ChatDotRound, Close, Edit } from '@element-plus/icons-vue'
 
-import { stylePrefix } from '../__builtins__/configs'
+import { stylePrefix } from '@moluoxixi/builtins/configs'
 import type { FormItemProps } from '../form-item'
 import { FormBaseItem } from '../form-item'
-import { composeExport } from '../__builtins__/shared'
+import { composeExport } from '@moluoxixi/builtins/shared'
 
 export type EditableProps = FormItemProps
 export type EditablePopoverProps = typeof ElPopover

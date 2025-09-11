@@ -11,7 +11,7 @@ import {
 } from '@formily/vue'
 import type { Schema, SchemaKey } from '@formily/json-schema'
 import { ElBadge, ElTabPane, ElTabs } from 'element-plus'
-import { composeExport, stylePrefix } from '../__builtins__'
+import { composeExport, stylePrefix } from '@moluoxixi/builtins'
 
 export interface IFormTab {
   activeKey: string

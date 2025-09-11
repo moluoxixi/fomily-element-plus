@@ -18,7 +18,7 @@ import { observer } from '@formily/reactive-vue'
 import { markRaw } from '@formily/reactive'
 import type { IGridOptions } from '@formily/grid'
 import { Grid } from '@formily/grid'
-import { composeExport, stylePrefix } from '../__builtins__'
+import { composeExport, stylePrefix } from '@moluoxixi/builtins'
 import { useFormLayout } from '../form-layout'
 
 export interface IFormGridProps extends IGridOptions {

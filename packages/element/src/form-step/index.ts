@@ -12,7 +12,7 @@ import {
 } from '@formily/vue'
 import type { Schema, SchemaKey } from '@formily/json-schema'
 import { ElStep, ElSteps } from 'element-plus'
-import { composeExport, stylePrefix } from '../__builtins__'
+import { composeExport, stylePrefix } from '@moluoxixi/builtins'
 
 export interface IFormStep {
   connect: (steps: SchemaStep[], field: VoidField) => void

@@ -3,7 +3,7 @@ import { defineComponent } from 'vue'
 import { PreviewText } from '../preview-text'
 
 import { ElOption, ElSelect } from 'element-plus'
-import { transformComponent } from '../__builtins__'
+import { transformComponent } from '@moluoxixi/builtins'
 
 export type SelectProps = typeof ElSelect & {
   options?: Array<typeof ElOption>

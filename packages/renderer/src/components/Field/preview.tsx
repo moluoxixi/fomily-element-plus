@@ -13,7 +13,7 @@ import {Container} from '../../common/Container'
 import {AllLocales} from '../../locales'
 import type {Component} from 'vue'
 import {defineComponent} from 'vue'
-import {composeExport} from '@moluoxixi/element/src/__builtins__'
+import {composeExport} from '@moluoxixi/builtins'
 
 Schema.silent(true)
 

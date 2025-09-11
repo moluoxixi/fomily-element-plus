@@ -14,7 +14,7 @@ import { ElBadge, ElCollapse, ElCollapseItem } from 'element-plus'
 import { toArr } from '@formily/shared'
 import type { GeneralField } from '@formily/core'
 
-import { composeExport, stylePrefix } from '../__builtins__'
+import { composeExport, stylePrefix } from '@moluoxixi/builtins'
 
 type ActiveKeys = string | number | Array<string | number>
 

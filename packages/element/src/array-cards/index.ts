@@ -4,9 +4,9 @@ import type { ArrayField } from '@formily/core'
 import { RecursionField, useField, useFieldSchema } from '@formily/vue'
 import { observer } from '@formily/reactive-vue'
 import type { ISchema } from '@formily/json-schema'
-import { stylePrefix } from '../__builtins__/configs'
+import { stylePrefix } from '@moluoxixi/builtins/configs'
 import { ArrayBase } from '../array-base'
-import { composeExport } from '../__builtins__/shared'
+import { composeExport } from '@moluoxixi/builtins/shared'
 
 function isAdditionComponent(schema: ISchema) {
   return schema['x-component']?.indexOf('Addition') > -1

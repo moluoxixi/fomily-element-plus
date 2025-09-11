@@ -4,7 +4,7 @@ import type { DnFC } from '@moluoxixi/element-prototypes'
 import { createFieldSchema } from '../Field'
 import { AllSchemas } from '../../schemas'
 import { AllLocales } from '../../locales'
-import { composeExport } from '@moluoxixi/element/src/__builtins__'
+import { composeExport } from '@moluoxixi/builtins'
 import { merge } from '@formily/shared'
 
 export const Input: DnFC<any>
