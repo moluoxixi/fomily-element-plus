@@ -33,6 +33,7 @@
     "vue-slicksort": "^2.0.0-alpha.5",
     "@formily/vue": "catalog:build",
     "vuedraggable": "catalog:build",
+    "@moluoxixi/viteconfig": "latest",
     "@moluoxixi/element": "workspace:*",
     "@moluoxixi/element-prototypes": "workspace:*",
     "@moluoxixi/element-renderer": "workspace:*",
