@@ -7,9 +7,7 @@
     "access": "public"
   },
   "scripts": {
-    "eslint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx,.md --fix",
-    "publish": "tsx _scripts/buildComponent.mts build-publish",
-    "build": "tsx _scripts/buildComponent.mts build"
+    "eslint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx,.md --fix"
   },
   "dependencies": {
     "@designable/core": "catalog:build",
