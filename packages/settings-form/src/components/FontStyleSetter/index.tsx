@@ -7,7 +7,7 @@ import { FoldItem } from '../FoldItem'
 import { InputItems } from '../InputItems'
 import { SizeInput } from '../SizeInput'
 import { ColorInput } from '../ColorInput'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import { defineComponent, unref } from 'vue-demi'
 
 // export interface IFontStyleSetterProps {}

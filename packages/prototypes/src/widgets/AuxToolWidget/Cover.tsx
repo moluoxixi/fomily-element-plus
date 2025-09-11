@@ -7,7 +7,7 @@ import {
 } from '../../hooks'
 import { observer } from '@formily/reactive-vue'
 import { ClosestPosition, CursorStatus } from '@designable/core'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import { defineComponent, toRef } from 'vue-demi'
 import { composeExport } from '@moluoxixi/builtins'
 import { isNum } from '@designable/shared'

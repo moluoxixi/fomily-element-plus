@@ -5,7 +5,7 @@ import type { DnFC } from '@moluoxixi/element-prototypes'
 import { createVoidFieldSchema } from '../Field'
 import { AllSchemas } from '../../schemas'
 import { AllLocales } from '../../locales'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import { defineComponent } from 'vue-demi'
 

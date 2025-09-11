@@ -2,7 +2,7 @@ import { useCursor, usePrefix, useViewport } from '../../hooks'
 import { observer } from '@formily/reactive-vue'
 import { CursorStatus, CursorType } from '@designable/core'
 import { calcRectByStartEndPoint, isNum } from '@designable/shared'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import { defineComponent } from 'vue-demi'
 
 export const FreeSelection = observer(

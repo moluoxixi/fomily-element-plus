@@ -1,6 +1,6 @@
 import { MobileBody } from './body'
 import { usePrefix } from '../../hooks'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import { defineComponent } from 'vue-demi'
 // export interface IMobileSimulatorProps

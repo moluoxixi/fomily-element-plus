@@ -1,6 +1,6 @@
 {
   "name": "@moluoxixi/element-setters",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "license": "MIT",
   "main": "src/index.ts",
   "publishConfig": {
@@ -18,7 +18,7 @@
     "@formily/reactive": "catalog:build",
     "@formily/reactive-vue": "catalog:build",
     "vue-demi": "catalog:build",
-    "classnames": "catalog:build",
+    "@moluoxixi/classnames": "catalog:build",
     "element-plus": "catalog:build",
     "@moluoxixi/element-prototypes": "workspace:*",
     "@moluoxixi/element-settings-form": "workspace:*",

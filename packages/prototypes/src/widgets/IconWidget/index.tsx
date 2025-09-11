@@ -21,7 +21,7 @@ import {
 import { composeExport } from '@moluoxixi/builtins'
 import { cloneElement, isVNode, useStyle } from '../../shared/'
 import { useContext } from '../../shared'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 
 const IconSymbol: InjectionKey<Ref<IconProviderProps>> = Symbol('')
 

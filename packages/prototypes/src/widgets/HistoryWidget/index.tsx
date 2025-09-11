@@ -2,7 +2,7 @@ import dayjs from 'dayjs'
 import { observer } from '@formily/reactive-vue'
 import { usePrefix, useWorkbench } from '../../hooks'
 import { TextWidget } from '../TextWidget'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import { defineComponent } from 'vue-demi'
 

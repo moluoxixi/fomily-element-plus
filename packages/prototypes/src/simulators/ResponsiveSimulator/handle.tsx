@@ -1,5 +1,5 @@
 import { usePrefix } from '../../hooks'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import { defineComponent } from '@vue/runtime-core'
 
 export enum ResizeHandleType {

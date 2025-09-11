@@ -7,7 +7,7 @@ import { LoadTemplate } from '../../common/LoadTemplate'
 import { useDropTemplate } from '../../hooks'
 import { createEnsureTypeItemsNode, createNodeId, findNodeByComponentPath, hasNodeByComponentPath, queryNodesByComponentPath } from '../../shared'
 import { ArrayBase, createArrayBehavior } from '../ArrayBase'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 
 import { composeExport } from '@moluoxixi/builtins'

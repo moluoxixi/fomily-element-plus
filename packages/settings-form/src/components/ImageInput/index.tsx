@@ -1,7 +1,7 @@
 import { ElInput as Input, ElUpload as Upload } from 'element-plus'
 import { IconWidget, useContext, usePrefix } from '@moluoxixi/element-prototypes'
 import { SettingsFormSymbol } from '../../shared/context'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import { defineComponent } from 'vue-demi'
 

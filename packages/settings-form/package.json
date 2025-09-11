@@ -1,6 +1,6 @@
 {
   "name": "@moluoxixi/element-settings-form",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "license": "MIT",
   "main": "src/index.ts",
   "publishConfig": {
@@ -26,7 +26,7 @@
     "@guolao/vue-monaco-editor": "^0.0.5",
     "@monaco-editor/loader": "1.5.0",
     "@vue/runtime-dom": "catalog:build",
-    "classnames": "catalog:build",
+    "@moluoxixi/classnames": "catalog:build",
     "element-plus": "catalog:build",
     "vue-demi": "catalog:build",
     "vue-slicksort": "^1.2.0",

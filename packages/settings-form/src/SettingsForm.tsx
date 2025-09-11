@@ -14,7 +14,7 @@ import { SchemaField } from './SchemaField'
 import { SettingsFormSymbol } from './shared/context'
 import { useLocales, useSnapshot } from './effects'
 import { ElEmpty as Empty } from 'element-plus'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import {
   computed,

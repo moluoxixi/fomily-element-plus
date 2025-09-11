@@ -1,5 +1,5 @@
 import { IconWidget, useContext, usePrefix } from '@moluoxixi/element-prototypes'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import type { InjectionKey, Ref } from 'vue-demi'
 import { computed, defineComponent, provide } from 'vue-demi'
 import './styles.less'

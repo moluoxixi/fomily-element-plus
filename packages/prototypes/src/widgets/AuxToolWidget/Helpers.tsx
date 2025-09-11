@@ -1,6 +1,6 @@
 import type { TreeNode } from '@designable/core'
 import { reaction } from '@formily/reactive'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import { usePrefix, useViewport } from '../../hooks'
 import { Selector } from './Selector'
 import { Copy } from './Copy'

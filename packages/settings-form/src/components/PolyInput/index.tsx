@@ -1,6 +1,6 @@
 import { ElButton as Button } from 'element-plus'
 import { IconWidget, usePrefix } from '@moluoxixi/element-prototypes'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import type { CSSProperties } from '@vue/runtime-dom'
 import { defineComponent, ref, unref, watch } from 'vue-demi'

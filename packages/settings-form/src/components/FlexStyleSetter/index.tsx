@@ -3,7 +3,7 @@ import { observer } from '@formily/reactive-vue'
 import { Radio } from './radio'
 import { IconWidget, usePrefix } from '@moluoxixi/element-prototypes'
 import { InputItems } from '../InputItems'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import { defineComponent, unref } from 'vue-demi'
 

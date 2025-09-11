@@ -1,4 +1,4 @@
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import { ElButton as Button, ElSpace, ElDialog as Modal } from 'element-plus'
 import type { Form } from '@formily/core'
 import { observable } from '@formily/reactive'

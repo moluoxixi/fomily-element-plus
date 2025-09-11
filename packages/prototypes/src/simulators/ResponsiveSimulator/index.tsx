@@ -18,7 +18,7 @@ import { useDesigner, usePrefix, useScreen } from '../../hooks'
 import { IconWidget } from '../../widgets'
 import { ResizeHandle, ResizeHandleType } from './handle'
 
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import type {
   Ref,

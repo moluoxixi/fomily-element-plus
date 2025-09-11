@@ -2,7 +2,7 @@ import { requestIdle } from '@designable/shared'
 import { observer } from '@formily/reactive-vue'
 import { IconWidget, TextWidget } from '../widgets'
 import { usePrefix, useWorkbench } from '../hooks'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import { defineComponent, ref, watchEffect } from 'vue-demi'
 
 export interface ISettingPanelProps {

@@ -1,7 +1,7 @@
 import { useDesigner, usePrefix } from '../../hooks'
 import type { TreeNode } from '@designable/core'
 import { IconWidget } from '../IconWidget'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import { defineComponent } from 'vue'
 
 export interface ITranslateHandlerProps {

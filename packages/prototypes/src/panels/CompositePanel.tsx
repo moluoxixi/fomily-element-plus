@@ -1,5 +1,5 @@
 import { isValid } from '@designable/shared'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import { IconWidget, TextWidget } from '../widgets'
 import { usePrefix } from '../hooks'
 import { composeExport } from '@moluoxixi/builtins'

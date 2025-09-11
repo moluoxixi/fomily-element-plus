@@ -1,4 +1,4 @@
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import { defineComponent } from 'vue-demi'
 import { usePrefix } from '../../hooks'
 import './styles.less'

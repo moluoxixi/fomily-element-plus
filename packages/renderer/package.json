@@ -1,6 +1,6 @@
 {
   "name": "@moluoxixi/element-renderer",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "license": "MIT",
   "main": "src/index.ts",
   "publishConfig": {
@@ -25,7 +25,7 @@
     "@vue/runtime-core": "catalog:build",
     "element-plus": "catalog:build",
     "@element-plus/icons-vue": "catalog:build",
-    "classnames": "catalog:build",
+    "@moluoxixi/classnames": "catalog:build",
     "@moluoxixi/element-setters": "workspace:*",
     "@moluoxixi/element": "workspace:*",
     "@moluoxixi/element-settings-form": "workspace:*",

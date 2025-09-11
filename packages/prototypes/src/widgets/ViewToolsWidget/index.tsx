@@ -5,7 +5,7 @@ import { IconWidget } from '../IconWidget'
 import { usePrefix, useWorkbench } from '../../hooks'
 import { defineComponent } from 'vue-demi'
 import type { CSSProperties } from '@vue/runtime-dom'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 
 export interface IViewToolsWidget {
   use?: WorkbenchTypes[]

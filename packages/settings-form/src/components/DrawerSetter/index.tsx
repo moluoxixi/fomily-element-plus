@@ -15,7 +15,7 @@ import {
 } from 'vue-demi'
 import { Teleport } from 'vue'
 import { ElButton } from 'element-plus'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 
 export interface IDrawerSetterProps {

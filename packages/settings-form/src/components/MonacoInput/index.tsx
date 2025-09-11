@@ -6,7 +6,7 @@ import { ElTooltip as Tooltip } from 'element-plus'
 import { parse, parseExpression } from '@babel/parser'
 import { isNum, uid } from '@designable/shared'
 import { format } from './format'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import { initMonaco } from './config'
 

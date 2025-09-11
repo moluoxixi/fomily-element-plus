@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { usePrefix } from '@designable/react'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 
 export interface ICornerInputProps {

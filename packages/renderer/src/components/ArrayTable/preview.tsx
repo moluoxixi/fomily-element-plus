@@ -16,7 +16,7 @@ import {
 import { ArrayBase } from '@moluoxixi/element'
 import { observer } from '@formily/reactive-vue'
 import { LoadTemplate } from '../../common/LoadTemplate'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import {
   createEnsureTypeItemsNode,
   findNodeByComponentPath,

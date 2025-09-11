@@ -1,4 +1,4 @@
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import { useOutline, usePrefix, useTree, useWorkbench } from '../../hooks'
 import { observer } from '@formily/reactive-vue'
 import { OutlineTreeNode } from './OutlineNode'

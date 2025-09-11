@@ -1,6 +1,6 @@
 import { usePosition, usePrefix } from '../hooks'
 import { Layout } from '../containers'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import type { StyleValue } from '@vue/runtime-dom'
 import { defineComponent, unref } from 'vue-demi'
 import type { VNode } from 'vue'

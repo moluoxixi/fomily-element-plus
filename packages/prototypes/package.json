@@ -1,6 +1,6 @@
 {
   "name": "@moluoxixi/element-prototypes",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "license": "MIT",
   "main": "src/index.ts",
   "publishConfig": {
@@ -18,7 +18,7 @@
     "dayjs": "catalog:build",
     "@vue/runtime-dom": "catalog:build",
     "@vue/runtime-core": "catalog:build",
-    "classnames": "catalog:build",
+    "@moluoxixi/classnames": "catalog:build",
     "vue-demi": "catalog:build",
     "@moluoxixi/element": "workspace:*",
     "@moluoxixi/builtins": "workspace:*"

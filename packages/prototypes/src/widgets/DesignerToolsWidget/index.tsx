@@ -13,7 +13,7 @@ import {
 import type { CSSProperties } from '@vue/runtime-dom'
 
 import { IconWidget } from '../IconWidget'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import { defineComponent, reactive } from 'vue-demi'
 import { useStyle } from '../../shared'

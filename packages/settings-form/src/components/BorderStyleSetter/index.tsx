@@ -10,7 +10,7 @@ import { ColorInput } from '../ColorInput'
 import { SizeInput } from '../SizeInput'
 import { PositionInput } from '../PositionInput'
 import type { CSSProperties } from '@vue/runtime-dom'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import { defineComponent, unref } from 'vue-demi'
 

@@ -10,6 +10,7 @@ interface BumpResult {
   version?: string
   name?: string
   prevVersion?: string
+  dir?: string
 }
 
 /** 返回：命令行解析结果 */
@@ -120,7 +121,7 @@ function bumpPackageVersion(pkgDir: string, type: VersionBump, dryRun: boolean):
     ? `预览版本更新（已写入）：${pkg.name} ${prev} -> ${next}`
     : `版本更新：${pkg.name} ${prev} -> ${next}`
   )
-  return { skipped: false, version: String(next), name: String(pkg.name), prevVersion: String(prev) }
+  return { skipped: false, dir: pkgDir, version: String(next), name: String(pkg.name), prevVersion: String(prev) }
 }
 
 /**
@@ -220,7 +221,6 @@ function parseArgs(argv: string[]): ParsedArgs {
     }
     if (token === 'major' || token === 'minor' || token === 'patch') {
       bumpType = token
-      continue
     }
   }
 
@@ -262,15 +262,18 @@ function main() {
 
   const results: Array<{ dir: string; ok: boolean; skipped: boolean }> = []
 
-  for (const dir of targetDirs) {
+  const bumps:Array<BumpResult> = []
+  targetDirs.forEach((dir:string)=>{
+    const bump = bumpPackageVersion(dir, bumpType, dryRun)
+    bumps.push(bump)
+    if (bump.skipped) {
+      results.push({dir, ok: true, skipped: true})
+    }
+  })
+
+  targetDirs.forEach((dir: string) => {
     try {
-      const bump = bumpPackageVersion(dir, bumpType, dryRun)
-      if (bump.skipped) {
-        results.push({ dir, ok: true, skipped: true })
-        continue
-      }
-      const ok = publishPackage(dir, dryRun)
-      results.push({ dir, ok, skipped: false })
+      const bump = bumps.find(item => item.dir === dir)
       if (dryRun && bump.prevVersion) {
         // 预览完成后始终回滚
         rollbackPackageVersion(dir, bump.prevVersion)
@@ -278,12 +281,16 @@ function main() {
         // 真实发布失败回滚
         rollbackPackageVersion(dir, bump.prevVersion)
       }
-    } catch (e) {
+
+
+      const ok = publishPackage(dir, dryRun)
+      results.push({dir, ok, skipped: false})
+    }catch (e){
       console.error(`处理失败：${dir}`)
       console.error(e)
-      results.push({ dir, ok: false, skipped: false })
+      results.push({dir, ok: false, skipped: false})
     }
-  }
+  })
 
   const failed = results.filter((r) => r.ok === false)
   const succeeded = results.filter((r) => r.ok === true && !r.skipped)

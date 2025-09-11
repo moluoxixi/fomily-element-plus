@@ -3,7 +3,7 @@ import { usePrefix } from '@moluoxixi/element-prototypes'
 import { FoldItem } from '../FoldItem'
 import { SizeInput } from '../SizeInput'
 import { InputItems } from '../InputItems'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import { defineComponent, unref } from 'vue-demi'
 
 type Position = 'top' | 'right' | 'left' | 'bottom' | 'all'

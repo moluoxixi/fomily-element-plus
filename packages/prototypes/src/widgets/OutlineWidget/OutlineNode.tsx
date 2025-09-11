@@ -19,7 +19,7 @@ import {
 import { IconWidget } from '../IconWidget'
 import { NodeTitleWidget } from '../NodeTitleWidget'
 import { NodeSymbol } from './context'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import { useContext, useStyle } from '../../shared'
 import type { CSSProperties } from '@vue/runtime-dom'

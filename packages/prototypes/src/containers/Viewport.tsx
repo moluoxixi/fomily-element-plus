@@ -2,7 +2,7 @@ import { usePrefix, useViewport } from '../hooks'
 import { AuxToolWidget, EmptyWidget } from '../widgets'
 import type { Viewport as ViewportType } from '@designable/core'
 import { requestIdle } from '@designable/shared'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import {
   defineComponent,
   onBeforeUnmount,

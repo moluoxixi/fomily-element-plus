@@ -1,5 +1,5 @@
 import { usePrefix } from '@moluoxixi/element-prototypes'
-import cls from 'classnames'
+import cls from '@moluoxixi/classnames'
 import './styles.less'
 import { defineComponent, ref, unref, watch } from 'vue-demi'
 
