@@ -3,7 +3,7 @@ import {
   transformToSchema,
   transformToTreeNode,
 } from '@designable/formily-transformer'
-import { MonacoInput } from '@moluoxixi/element-settings-form'
+import { MonacoInput } from 'packages/settings-form/_src'
 
 export default defineComponent({
   name: 'SchemaEditorWidget',

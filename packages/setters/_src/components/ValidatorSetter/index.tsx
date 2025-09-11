@@ -5,7 +5,7 @@ import { Schema, SchemaSymbol, useField } from '@formily/vue'
 import { observer } from '@formily/reactive-vue'
 import { GlobalRegistry } from '@designable/core'
 import { ArrayItems } from '@moluoxixi/element'
-import { FoldItem } from '@moluoxixi/element-settings-form'
+import { FoldItem } from 'packages/settings-form/_src'
 import { ElOption as Option, ElSelect as Select } from 'element-plus'
 
 export interface IValidatorSetterProps {

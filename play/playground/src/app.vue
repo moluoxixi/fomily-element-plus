@@ -69,7 +69,7 @@ import {
   ViewToolsWidget,
   Workbench,
   WorkspacePanel,
-} from '@moluoxixi/element-prototypes'
+} from 'packages/prototypes/_src'
 import {
   ArrayCards,
   ArrayTable,
@@ -99,7 +99,7 @@ import {
   TreeSelect,
   Upload,
 } from '@moluoxixi/element-renderer'
-import { SettingsForm } from '@moluoxixi/element-settings-form'
+import { SettingsForm } from 'packages/settings-form/_src'
 import { defineComponent } from 'vue'
 import LogoWidget from "./widgets/logo-widget.vue";
 import ActionsWidget from "./widgets/actions-widget.vue";

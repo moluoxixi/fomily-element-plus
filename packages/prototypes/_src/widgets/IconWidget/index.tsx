@@ -19,7 +19,7 @@ import {
   unref,
 } from 'vue-demi'
 import { composeExport } from '@moluoxixi/builtins'
-import { cloneElement, isVNode, useStyle } from '../../shared/'
+import { cloneElement, isVNode, useStyle } from '../../shared'
 import { useContext } from '../../shared'
 import cls from '@moluoxixi/classnames'
 

@@ -6,7 +6,7 @@ import { createSchemaField } from '@formily/vue'
 import { GlobalRegistry } from '@designable/core'
 import { requestIdle } from '@designable/shared'
 import { defineComponent, TextWidget, usePrefix } from '@moluoxixi/element-prototypes'
-import { MonacoInput } from '@moluoxixi/element-settings-form'
+import { MonacoInput } from 'packages/settings-form/_src'
 import { markRaw, ref, watch } from 'vue'
 
 import { ArrayTable, Form, FormCollapse, FormItem, Input, Select } from '@moluoxixi/element'

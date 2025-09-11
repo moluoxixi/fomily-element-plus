@@ -264,6 +264,7 @@ function main() {
 
   const bumps:Array<BumpResult> = []
   targetDirs.forEach((dir:string)=>{
+
     const bump = bumpPackageVersion(dir, bumpType, dryRun)
     bumps.push(bump)
     if (bump.skipped) {

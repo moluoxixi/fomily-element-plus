@@ -1,4 +1,4 @@
-import { getNpmCDNRegistry, MonacoInput } from '@moluoxixi/element-settings-form'
+import { getNpmCDNRegistry, MonacoInput } from 'packages/settings-form/_src'
 
 export interface IDependency {
   name: string
