@@ -21,7 +21,7 @@
 import { defineComponent, onMounted, ref } from 'vue'
 import { loadInitialSchema, saveSchema } from '../service'
 import { GlobalRegistry } from '@designable/core'
-import { useDesigner } from 'packages/prototypes/_src'
+import { useDesigner } from '@moluoxixi/element-prototypes'
 
 function useI18n() {
   const language = ref(

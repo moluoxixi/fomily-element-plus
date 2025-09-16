@@ -69,7 +69,7 @@ import {
   ViewToolsWidget,
   Workbench,
   WorkspacePanel,
-} from 'packages/prototypes/_src'
+} from '@moluoxixi/element-prototypes'
 import {
   ArrayCards,
   ArrayTable,
