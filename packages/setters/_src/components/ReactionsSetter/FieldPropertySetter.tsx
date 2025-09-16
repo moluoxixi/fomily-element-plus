@@ -1,6 +1,6 @@
 import { TextWidget, usePrefix } from '@moluoxixi/element-prototypes'
 import { ElMenu as Menu, ElMenuItem as MenuItem } from 'element-plus'
-import { MonacoInput } from 'packages/settings-form/_src'
+import { MonacoInput } from '@moluoxixi/element-settings-form'
 import { isPlainObj, reduce } from '@formily/shared'
 import { FieldProperties } from './properties'
 import { defineComponent, ref } from 'vue'

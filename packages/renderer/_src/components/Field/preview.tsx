@@ -1,19 +1,19 @@
-import {FormPath} from '@formily/core'
-import {toJS} from '@formily/reactive'
-import type {ISchema,} from '@formily/vue'
-import {ArrayField, Field as InternalField, ObjectField, Schema, VoidField,} from '@formily/vue'
-import {observer} from '@formily/reactive-vue'
-import {FormItem} from '@moluoxixi/element/'
-import {each, reduce} from '@formily/shared'
-import {createBehavior} from '@designable/core'
-import type {DnFC,} from '@moluoxixi/element-prototypes'
-import {useComponents, useDesigner, useTreeNode,} from '@moluoxixi/element-prototypes'
-import {isArr, isFn, isStr} from '@designable/shared'
-import {Container} from '../../common/Container'
-import {AllLocales} from '../../locales'
-import type {Component} from 'vue'
-import {defineComponent} from 'vue'
-import {composeExport} from '@moluoxixi/builtins'
+import { FormPath } from '@formily/core'
+import { toJS } from '@formily/reactive'
+import type { ISchema } from '@formily/vue'
+import { ArrayField, Field as InternalField, ObjectField, Schema, VoidField } from '@formily/vue'
+import { observer } from '@formily/reactive-vue'
+import { FormItem } from '@moluoxixi/element'
+import { each, reduce } from '@formily/shared'
+import { createBehavior } from '@designable/core'
+import type { DnFC } from '@moluoxixi/element-prototypes'
+import { useComponents, useDesigner, useTreeNode } from '@moluoxixi/element-prototypes'
+import { isArr, isFn, isStr } from '@designable/shared'
+import { Container } from '../../common/Container'
+import { AllLocales } from '../../locales'
+import type { Component } from 'vue'
+import { defineComponent } from 'vue'
+import { composeExport } from '@moluoxixi/builtins'
 
 Schema.silent(true)
 
@@ -45,7 +45,7 @@ const NeedShownExpression = {
   'x-value': true,
 }
 
-const isExpression = (val: any) => isStr(val) && /^\{\{.*}}$/.test(val)
+const isExpression = (val: any) => isStr(val) && /^\{\{.*\}\}$/.test(val)
 
 function filterExpression(val: any) {
   if (typeof val === 'object') {
@@ -55,7 +55,8 @@ function filterExpression(val: any) {
       (buf: any, value, key) => {
         if (isExpression(value)) {
           return buf
-        } else {
+        }
+        else {
           const results = filterExpression(value)
           if (results === undefined || results === null)
             return buf

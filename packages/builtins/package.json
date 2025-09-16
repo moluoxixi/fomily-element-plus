@@ -13,6 +13,11 @@
     "vue": "catalog:build"
   },
   "dependencies": {
-    "element-plus": "catalog:build"
+    "element-plus": "catalog:build",
+    "@formily/vue": "catalog:build",
+    "@formily/shared": "catalog:build",
+    "sass": "catalog:dev",
+    "sass-embedded": "catalog:dev",
+    "sass-loader": "catalog:dev"
   }
 }

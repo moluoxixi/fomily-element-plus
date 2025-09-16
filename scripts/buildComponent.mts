@@ -18,21 +18,21 @@ const __dirname = dirname(__filename)
 /** 项目根目录，用于获取依赖版本信息 */
 const rootDir = resolve(__dirname, '../')
 /** 组件仓库所在路径  */
-const packDir = resolve(__dirname, '../packages')
+const packDir = resolve(rootDir, './packages')
 /** 路径别名 */
 const alias = {
   '@moluoxixi/builtins': resolve(rootDir, './packages/builtins'),
-  '@moluoxixi/builtins/*': resolve(rootDir, './packages/builtins/*'),
-  '@moluoxixi/element': resolve(rootDir, './packages/element'),
-  '@moluoxixi/element/*': resolve(rootDir, './packages/element/*'),
-  '@moluoxixi/prototypes': resolve(rootDir, './packages/prototypes'),
-  '@moluoxixi/prototypes/*': resolve(rootDir, './packages/prototypes/*'),
-  '@moluoxixi/renderer': resolve(rootDir, './packages/renderer'),
-  '@moluoxixi/renderer/*': resolve(rootDir, './packages/renderer/*'),
-  '@moluoxixi/setters': resolve(rootDir, './packages/setters'),
-  '@moluoxixi/setters/*': resolve(rootDir, './packages/setters/*'),
-  '@moluoxixi/settings-form': resolve(rootDir, './packages/settings-form'),
-  '@moluoxixi/settings-form/*': resolve(rootDir, './packages/settings-form/*'),
+  // '@moluoxixi/builtins/*': resolve(rootDir, './packages/builtins/*'),
+  // '@moluoxixi/element': resolve(rootDir, './packages/element'),
+  // '@moluoxixi/element/*': resolve(rootDir, './packages/element/*'),
+  // '@moluoxixi/element-prototypes': resolve(rootDir, './packages/prototypes'),
+  // '@moluoxixi/element-prototypes/*': resolve(rootDir, './packages/prototypes/*'),
+  // '@moluoxixi/element-renderer': resolve(rootDir, './packages/renderer'),
+  // '@moluoxixi/element-renderer/*': resolve(rootDir, './packages/renderer/*'),
+  // '@moluoxixi/element-setters': resolve(rootDir, './packages/setters'),
+  // '@moluoxixi/element-setters/*': resolve(rootDir, './packages/setters/*'),
+  // '@moluoxixi/element-settings-form': resolve(rootDir, './packages/settings-form'),
+  // '@moluoxixi/element-settings-form/*': resolve(rootDir, './packages/settings-form/*'),
 }
 function parseBoolean(input: string | undefined, defaultValue = false): boolean {
   if (typeof input === 'undefined')
@@ -46,7 +46,7 @@ async function main() {
   // 获取命令行参数
   const args = process.argv.slice(2)
   const command = args[0] || 'build-publish' // 默认命令是build
-  const mode = args[1] || 'all' // 默认模式是all
+  const mode = args[1] || 'allComponent' // 默认模式是all
   // 第三个参数：是否排除重型插件（布尔），默认 false
   const excludeHeavyPlugins = parseBoolean(args[2], false)
 

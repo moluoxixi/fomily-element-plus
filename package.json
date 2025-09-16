@@ -8,7 +8,7 @@
   "scripts": {
     "eslint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx,.md --fix",
     "publish": "tsx scripts/buildComponent.mts build-publish allComponent",
-    "build": "tsx scripts/buildComponent.mts build allComponent"
+    "build": "tsx scripts/buildComponent.mts build"
   },
   "devDependencies": {
     "eslint": "catalog:dev",

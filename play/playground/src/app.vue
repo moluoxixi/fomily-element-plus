@@ -6,7 +6,7 @@
           <LogoWidget />
         </template>
         <template #actions>
-          <actions-widget />
+          <ActionsWidget />
         </template>
         <CompositePanel>
           <CompositePanelItem title="panels.Component" icon="Component">
@@ -99,12 +99,12 @@ import {
   TreeSelect,
   Upload,
 } from '@moluoxixi/element-renderer'
-import { SettingsForm } from 'packages/settings-form/_src'
+import { SettingsForm } from '@moluoxixi/element-settings-form'
 import { defineComponent } from 'vue'
-import LogoWidget from "./widgets/logo-widget.vue";
-import ActionsWidget from "./widgets/actions-widget.vue";
-import PreviewWidget from "./widgets/preview-widget";
-import SchemaEditorWidget from "./widgets/schema-editor-widget";
+import LogoWidget from './widgets/logo-widget.vue'
+import ActionsWidget from './widgets/actions-widget.vue'
+import PreviewWidget from './widgets/preview-widget'
+import SchemaEditorWidget from './widgets/schema-editor-widget'
 
 GlobalRegistry.registerDesignerLocales({
   'zh-CN': {

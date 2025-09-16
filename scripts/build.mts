@@ -20,8 +20,10 @@ import Components from 'unplugin-vue-components/vite'
 import viteImagemin from 'vite-plugin-imagemin'
 import { obfuscator } from 'rollup-obfuscator'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
-import { lazyImport, VxeResolver } from 'vite-plugin-lazy-import'
+// import { lazyImport, VxeResolver } from 'vite-plugin-lazy-import'
 
+/** 必须排除的文件 */
+const mustExcludeDirs = ['moluoxixi', 'node_modules', 'typings', '_typings', 'builtins']
 export interface BuildContext {
   /** === 组件库命名空间配置 === */
   LIB_NAMESPACE: string
@@ -53,8 +55,6 @@ export interface BuildContext {
   alias: Record<string, string>
   /** 路径别名（无 * 的包前缀集合） */
   aliasPacks: string[]
-  /** 上传类型（用于 UploadEvent），默认 'Vue3' */
-  uploadType?: string
 }
 
 export type ModuleFormat = 'es' | 'cjs'
@@ -92,6 +92,7 @@ function sleep(ms: number): Promise<void> {
  * @returns 基础配置对象
  */
 function createBaseConfig(ctx: BuildContext, comp: string, internalDeps: string[]): InlineConfig {
+  console.log('aaaaaaaaaaaaa', ctx.packDir, `.${ctx.entryBaseUrl}${comp}`)
   return {
     root: ctx.packDir,
     configFile: false,
@@ -108,16 +109,16 @@ function createBaseConfig(ctx: BuildContext, comp: string, internalDeps: string[
         },
       }),
       vueJsx(),
-      lazyImport({
-        resolvers: [
-          VxeResolver({
-            libraryName: 'vxe-pc-ui',
-          }),
-          VxeResolver({
-            libraryName: 'vxe-table',
-          }),
-        ],
-      }),
+      // lazyImport({
+      //   resolvers: [
+      //     VxeResolver({
+      //       libraryName: 'vxe-pc-ui',
+      //     }),
+      //     VxeResolver({
+      //       libraryName: 'vxe-table',
+      //     }),
+      //   ],
+      // }),
       // 自动引入
       AutoImport({
         imports: ['vue'],
@@ -161,9 +162,8 @@ function createBaseConfig(ctx: BuildContext, comp: string, internalDeps: string[
       ...(!ctx.excludeHeavyPlugins
         ? [
             dts({
-              root: ctx.packDir,
-              entryRoot: `.${ctx.entryBaseUrl}${comp}`,
-              tsconfigPath: './tsconfig.base.json',
+              entryRoot: resolve(ctx.packDir, `.${ctx.entryBaseUrl}${comp}`),
+              tsconfigPath: resolve(ctx.packDir, `.${ctx.entryBaseUrl}${comp}`, './tsconfig.base.json'),
               declarationOnly: false,
             }),
           ]
@@ -187,7 +187,7 @@ function createBaseConfig(ctx: BuildContext, comp: string, internalDeps: string[
           api: 'legacy',
           additionalData(content: string, filename: string) {
             if (filename.includes('element')) {
-              const addStr = `$namespace: el`
+              const addStr = `$namespace: el;`
               return `${addStr}\n${content}`
             }
             return content
@@ -200,12 +200,12 @@ function createBaseConfig(ctx: BuildContext, comp: string, internalDeps: string[
 
 /** 获取组件列表（只分目录的组件） */
 async function getComponentNames(ctx: BuildContext) {
-  const componentDirs = await glob([`.${ctx.entryBaseUrl}*`, `!.${ctx.entryBaseUrl}_*`, '!moluoxixi', '!node_modules', '!typings', '!_typings'], {
+  const componentDirs = await glob([`.${ctx.entryBaseUrl}*`, `!.${ctx.entryBaseUrl}_*`, ...mustExcludeDirs.map(i => `!${i}`)], {
     cwd: ctx.packDir,
     onlyDirectories: true,
     ignore: [`${ctx.entryBaseUrl}_*`],
   })
-  const excludeDirs = ['node_modules', 'typings', ctx.LIB_NAMESPACE]
+  const excludeDirs = [ctx.LIB_NAMESPACE, ...mustExcludeDirs]
   return componentDirs
     .map(dir => dir.split('/').pop() || '')
     .filter(dirName => !!dirName && !excludeDirs.includes(dirName))
@@ -473,7 +473,7 @@ async function analyzeComponentDeps(ctx: BuildContext, comp: string) {
 
     // 补充：直接扫描代码中的import语句（作为backup + 扩展分析）
     console.log(`补充扫描import语句...,${componentDir}`)
-    const files = await glob(['**/*.{vue,ts,tsx,js,jsx}', '!moluoxixi', '!node_modules', '!typings', '!_typings'], {
+    const files = await glob(['**/*.{vue,ts,tsx,js,jsx}', ...mustExcludeDirs.map(i => `!${i}`)], {
       cwd: componentDir,
       absolute: true,
     })
@@ -1172,7 +1172,6 @@ async function buildComponent(
 
     // 写入package.json
     await fsp.writeFile(resolve(outputDir, 'package.json'), JSON.stringify(pkgJson, null, 2), 'utf-8')
-    const fileUrl = path.resolve(`${outputDir}/es/index.mjs`)
     console.log(`==========  ${buildName} 打包完成 ==========`)
     // 如果需要发布，执行发布
     if (shouldPublish) {
@@ -1183,12 +1182,12 @@ async function buildComponent(
       })
 
       try {
-        console.log(`开始发布 ${pkgJson.name}@${pkgJson.version}...`)
-
-        // 发布组件
-        const packageDir = comp ? `${ctx.LIB_NAMESPACE}/packages/${comp}` : ctx.LIB_NAMESPACE
-        execSync(`cd ${packageDir} && npm publish --tag latest`, { stdio: 'inherit' })
-        console.log(`${pkgJson.name}@${pkgJson.version} 发布成功！`)
+        // console.log(`开始发布 ${pkgJson.name}@${pkgJson.version}...`)
+        //
+        // // 发布组件
+        // const packageDir = comp ? `${ctx.LIB_NAMESPACE}/packages/${comp}` : ctx.LIB_NAMESPACE
+        // execSync(`cd ${packageDir} && npm publish --tag latest`, { stdio: 'inherit' })
+        // console.log(`${pkgJson.name}@${pkgJson.version} 发布成功！`)
       }
       catch (error) {
         console.error('发布失败:', error)
@@ -1315,7 +1314,7 @@ export interface BuildOptions {
   useExternal?: boolean
   /** 强制 external 的组件列表（组件名数组） */
   requireExternalPacks?: string[]
-  /** 入口基础路径（默认 '/'，相对 components 包根目录） */
+  /** 组件的入口文件路径,需要以/开头，/结尾，相对于packDir */
   entryBaseUrl?: string
   /** 需要项目预设的依赖（可选，传入则覆盖自动推导） */
   presetGlobals?: Record<string, string>
